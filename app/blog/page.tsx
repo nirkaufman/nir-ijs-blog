@@ -7,7 +7,7 @@ export default async function Blog() {
       <>
       <h3>Blog</h3>
       <ul>
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <li key={post.id}>
             <a href={`/blog/${post.id}`}>{post.title}</a>
           </li>
