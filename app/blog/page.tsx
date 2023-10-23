@@ -1,7 +1,8 @@
 import {db} from "@/_lib/db";
+import {Post} from "@prisma/client";
 
 export default async function Blog() {
-  const posts = await db.post.findMany();
+  const posts:Post[] = await db.post.findMany();
 
   return (
       <>
