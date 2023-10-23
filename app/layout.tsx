@@ -1,4 +1,5 @@
 import {ReactNode} from "react";
+import {Providers} from "@/_components/Providers";
 
 interface LayoutProps {
   children: ReactNode
@@ -6,8 +7,12 @@ interface LayoutProps {
 
 export default function RootLayout({children}: LayoutProps) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+      <html lang="en">
+      <body>
+      <Providers>
+        {children}
+      </Providers>
+      </body>
+      </html>
   )
 }
